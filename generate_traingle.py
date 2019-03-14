@@ -84,12 +84,21 @@ def main():
     FILE_WRITER3.writerow(LABEL3)
 
     for i in range(1000):
-        a = randint(100000)
+        x = randint(1000)
 
         # If n is odd, then n, (n**2-1)/2, (n**2+1)/2 is a right triangle.
-        if a % 2 == 1:
-            b = (a**2 - 1) / 2
-            c = (a**2 + 1) / 2
+        if x % 2 == 1:
+            y = (x**2 - 1) / 2
+            z = (x**2 + 1) / 2
+
+            # sides should be assigned such that there pattern in order
+            rand = randint(3)
+            if rand == 1:
+                a, b, c = x, y, z
+            elif rand == 2:
+                a, b, c = y, x, z
+            else:
+                a, b, c = z, x, y
 
         else:
             b = randint(100000)
