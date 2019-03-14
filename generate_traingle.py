@@ -91,18 +91,21 @@ def main():
             y = (x**2 - 1) / 2
             z = (x**2 + 1) / 2
 
-            # sides should be assigned such that there pattern in order
-            rand = randint(3)
-            if rand == 1:
-                a, b, c = x, y, z
-            elif rand == 2:
-                a, b, c = y, x, z
-            else:
-                a, b, c = z, x, y
-
+        # If n is even, then n, (n**2/4)-1, (n**2/4)+1 is a right triangle.
         else:
-            b = randint(100000)
-            c = randint(100000)
+            y = (x**2 / 4) - 1
+            z = (x**2 / 4) + 1
+
+        # Randomly assign values to labels to bring some noise in data
+        rand = randint(4)
+        if rand == 1:
+            a, b, c = x, y, z
+        elif rand == 2:
+            a, b, c = y, x, z
+        else:
+            a = x
+            b = randint(10000)
+            c = randint(10000)
 
         validity = check_right_triangle(a, b, c)
 
