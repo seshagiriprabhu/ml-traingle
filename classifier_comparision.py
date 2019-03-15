@@ -22,8 +22,8 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 # Classifier related constants
 NAMES = [
     "Nearest Neighbors",
-    "Linear SVM",
-    "RBF SVM",
+    # "Linear SVM",
+    # "RBF SVM",
     "Gaussian Process",
     "Decision Tree",
     "Random Forest",
@@ -35,8 +35,8 @@ NAMES = [
 
 CLASSIFIERS = [
     KNeighborsClassifier(3),
-    SVC(kernel="linear", C=0.025),
-    SVC(gamma=2, C=1),
+    # SVC(kernel="linear", C=0.025),
+    # SVC(gamma=2, C=1),
     GaussianProcessClassifier(1.0 * RBF(1.0)),
     DecisionTreeClassifier(max_depth=5),
     RandomForestClassifier(max_depth=5, n_estimators=10, max_features=1),
@@ -80,40 +80,42 @@ def main():
     for filename in DATASET_FILES:
         TESTING_DATASET.append(pnd.read_csv(filename))
 
-    for name, classifier in zip(NAMES, CLASSIFIERS):
+    for i in range(len(TESTING_DATASET)):
+        if i == 0 or i == 1:
+            X_train, X_test, y_train, y_test = train_test_split(
+                TESTING_DATASET[i].loc[:, 'side1':'side3'],
+                TESTING_DATASET[i].loc[:, 'validity'],
+                test_size=0.20,
+                train_size=0.80,
+                random_state=345123
+            )
+
+        if i == 2:
+            X_train, X_test, y_train, y_test = train_test_split(
+                TESTING_DATASET[i].loc[:, 'side1':'side32'],
+                TESTING_DATASET[i].loc[:, 'validity'],
+                test_size=0.20,
+                train_size=0.80,
+                random_state=269380
+            )
+
+        else:
+            X_train, X_test, y_train, y_test = train_test_split(
+                TESTING_DATASET[i].loc[:, 'side12':'side32'],
+                TESTING_DATASET[i].loc[:, 'validity'],
+                test_size=0.20,
+                train_size=0.80,
+                random_state=7887631
+            )
+
         print("-" * 40)
-        print(name + " Classification Result")
+        print(TESTING_DATASET_NAMES[i])
         print("-" * 40)
 
-        for i in range(len(TESTING_DATASET)):
-            if i == 0 or i == 1:
-                X_train, X_test, y_train, y_test = train_test_split(
-                    TESTING_DATASET[i].loc[:, 'side1':'side3'],
-                    TESTING_DATASET[i].loc[:, 'validity'],
-                    test_size=0.20,
-                    train_size=0.80,
-                    random_state=345123
-                )
-            if i == 2:
-                X_train, X_test, y_train, y_test = train_test_split(
-                    TESTING_DATASET[i].loc[:, 'side1':'side32'],
-                    TESTING_DATASET[i].loc[:, 'validity'],
-                    test_size=0.20,
-                    train_size=0.80,
-                    random_state=269380
-                )
-            else:
-                X_train, X_test, y_train, y_test = train_test_split(
-                    TESTING_DATASET[i].loc[:, 'side12':'side32'],
-                    TESTING_DATASET[i].loc[:, 'validity'],
-                    test_size=0.20,
-                    train_size=0.80,
-                    random_state=7887631
-                )
-
+        for name, classifier in zip(NAMES, CLASSIFIERS):
             classifier.fit(X_train, y_train)
             score = classifier.score(X_test, y_test)
-            print(TESTING_DATASET_NAMES[i] + ': %.2f' % (score))
+            print(name + ": %.2f" % (score))
 
         print("-" * 40 + "\n")
 
