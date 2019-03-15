@@ -8,13 +8,15 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # local python import
 from utils import T_DATASET1, T_DATASET3
-from utils import RT_DATASET1, RT_DATASET3, RT_DATASET5
+from utils import RT_DATASET1, RT_DATASET3
+from utils import RT_DATASET4, RT_DATASET5
 from utils import IMAGE_FILES
 
 
 DATASET_FILES = [
     T_DATASET1, T_DATASET3,
-    RT_DATASET1, RT_DATASET3, RT_DATASET5
+    RT_DATASET1, RT_DATASET3,
+    RT_DATASET4, RT_DATASET5
 ]
 
 for counter, dataset in enumerate(DATASET_FILES):
@@ -38,6 +40,11 @@ for counter, dataset in enumerate(DATASET_FILES):
         x, y, z = DF['side1^2'], DF['side2^2'], DF['side3^2']
         l1, l2, l3 = 'Side1^2', 'Side2^2', 'Side3^2'
         title = "Right Triangle with Side Squares"
+    elif counter == 4:
+        x, y = DF['side1+side2'], DF['side1+side3']
+        z = DF['side2+side3']
+        l1, l2, l3 = 'Side1 + Side 2', 'Side1 + Side 3', 'Side 2 + Side3'
+        title = "Right Triangle with Sum of Sides"
     else:
         x, y = DF['side1^2+side2^2'], DF['side1^2+side3^2']
         z = DF['side2^2+side3^2']

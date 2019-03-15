@@ -31,7 +31,9 @@ T_IMAGE2 = os.path.join(IMAGE_DIR, "t_image2.png")
 RT_IMAGE1 = os.path.join(IMAGE_DIR, "rt_image1.png")
 RT_IMAGE2 = os.path.join(IMAGE_DIR, "rt_image2.png")
 RT_IMAGE3 = os.path.join(IMAGE_DIR, "rt_image3.png")
-IMAGE_FILES = [T_IMAGE1, T_IMAGE2, RT_IMAGE1, RT_IMAGE2, RT_IMAGE3]
+RT_IMAGE4 = os.path.join(IMAGE_DIR, "rt_image4.png")
+IMAGE_FILES = [T_IMAGE1, T_IMAGE2]
+IMAGE_FILES += [RT_IMAGE1, RT_IMAGE2, RT_IMAGE3, RT_IMAGE4]
 
 # Normal triangle dataset related constants
 T_LABEL1 = ['side1', 'side2', 'side3', 'validity']
