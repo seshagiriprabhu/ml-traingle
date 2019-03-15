@@ -55,4 +55,4 @@ for counter, dataset in enumerate(DATASET_FILES):
     THREEDEE.set_xlabel(l1, fontsize=16)
     THREEDEE.set_ylabel(l2, fontsize=16)
     THREEDEE.set_zlabel(l3, fontsize=16)
-    plt.savefig(IMAGE_FILES[counter], dpi=72, bbox_inches='tight')
+    plt.savefig(IMAGE_FILES[counter], dpi=200, bbox_inches='tight')
