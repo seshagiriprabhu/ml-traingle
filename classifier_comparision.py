@@ -5,9 +5,8 @@ various classic ML classifiers.
 """
 from __future__ import print_function
 
-import os
 import pandas as pnd
-from sklearn.svm import SVC
+# from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -18,6 +17,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+
+# local python import
+from utils import T_FILE_NAMES, RT_FILE_NAMES
+from utils import T_LABELS, RT_LABELS
 
 # Classifier related constants
 NAMES = [
@@ -55,61 +58,30 @@ CLASSIFIERS = [
 ]
 
 
-# File related constants
-APP_DIR = os.path.dirname(os.path.realpath(__file__))
-DATA_DIR = os.path.join(APP_DIR, 'data')
-TRIANGLE_FILE = os.path.join(DATA_DIR, "triangle.csv")
-DATASET1_FILE = os.path.join(DATA_DIR, "dataset1.csv")
-DATASET2_FILE = os.path.join(DATA_DIR, "dataset2.csv")
-DATASET3_FILE = os.path.join(DATA_DIR, "dataset3.csv")
-DATASET_FILES = [
-    TRIANGLE_FILE, DATASET1_FILE, DATASET2_FILE, DATASET3_FILE
-]
-TESTING_DATASET_NAMES = [
-    "Normal Triangle",
-    "Right Triangle Dataset 1",
-    "Right Triangle Dataset 2",
-    "Right Triangle Dataset 3"
-]
-TESTING_DATASET = []
-
-
 def main():
     """Main function."""
 
-    for filename in DATASET_FILES:
-        TESTING_DATASET.append(pnd.read_csv(filename))
+    testing_dataset = []
+    for filename in T_FILE_NAMES:
+        testing_dataset.append(pnd.read_csv(filename))
 
-    for i in range(len(TESTING_DATASET)):
-        if i == 0 or i == 1:
-            X_train, X_test, y_train, y_test = train_test_split(
-                TESTING_DATASET[i].loc[:, 'side1':'side3'],
-                TESTING_DATASET[i].loc[:, 'validity'],
-                test_size=0.20,
-                train_size=0.80,
-                random_state=345123
-            )
+    for filename in RT_FILE_NAMES:
+        testing_dataset.append(pnd.read_csv(filename))
 
-        if i == 2:
-            X_train, X_test, y_train, y_test = train_test_split(
-                TESTING_DATASET[i].loc[:, 'side1':'side32'],
-                TESTING_DATASET[i].loc[:, 'validity'],
-                test_size=0.20,
-                train_size=0.80,
-                random_state=269380
-            )
-
-        else:
-            X_train, X_test, y_train, y_test = train_test_split(
-                TESTING_DATASET[i].loc[:, 'side12':'side32'],
-                TESTING_DATASET[i].loc[:, 'validity'],
-                test_size=0.20,
-                train_size=0.80,
-                random_state=7887631
-            )
+    for counter in range(len(testing_dataset)):
+        # Splitting the columns into data and target
+        ds_x = testing_dataset[counter].iloc[:, :-1]
+        target = testing_dataset[counter].loc[:, 'validity']
+        kwargs = dict(test_size=0.2, train_size=0.8, random_state=269380)
+        X_train, X_test, y_train, y_test = train_test_split(ds_x, target, **kwargs)
 
         print("-" * 40)
-        print(TESTING_DATASET_NAMES[i])
+        if counter < 3:
+            print("Dataset: Normal Triangle")
+            print(T_LABELS[counter])
+        else:
+            print("Dataset: Right Angle Triangle")
+            print(RT_LABELS[counter - 3])
         print("-" * 40)
 
         for name, classifier in zip(NAMES, CLASSIFIERS):
