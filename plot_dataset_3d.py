@@ -69,7 +69,7 @@ for count, T_FILES in enumerate(DATASET_T_FILES):
             x, y, z,
             c=DF['validity'],
             s=60,
-            cmap='Accent'
+            cmap='PRGn'
         )
         THREEDEE.set_title(title, fontsize=30)
         THREEDEE.set_xlabel(l1, fontsize=16)
@@ -119,7 +119,7 @@ for count, RT_FILES in enumerate(DATASET_RT_FILES):
             x, y, z,
             c=DF['validity'],
             s=60,
-            cmap='Accent'
+            cmap='PRGn'
         )
         THREEDEE.set_title(title, fontsize=30)
         THREEDEE.set_xlabel(l1, fontsize=16)
