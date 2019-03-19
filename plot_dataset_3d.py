@@ -3,8 +3,11 @@
 A program to plot the triangle and right triangle datasets
 """
 import os.path
+import numpy as np
 import pandas as pnd
+import matplotlib as mpl
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 from mpl_toolkits.mplot3d import Axes3D
 
 # local python import
@@ -44,6 +47,8 @@ IMAGE_RT_FILES = [
     IMG5_RT_FILES, IMG6_RT_FILES
 ]
 
+mpl.rcParams['legend.fontsize'] = 10
+
 for count, T_FILES in enumerate(DATASET_T_FILES):
     for counter, dataset in enumerate(T_FILES):
 
@@ -64,17 +69,21 @@ for count, T_FILES in enumerate(DATASET_T_FILES):
             x, y, z = DF['side1+side2'], DF['side1+side3'], DF['side2+side3']
             l1, l2, l3 = 'Side1 + Side 2', 'Side 1 + Side 3', 'Side 2 + Side 3'
             title = "Normal Triangle with Sum of Sides"
-
+        colors = np.where(DF['validity'] == 1, 'red', 'blue')
         THREEDEE.scatter(
             x, y, z,
-            c=DF['validity'],
+            c=colors,
             s=60,
-            cmap='PRGn'
+            alpha=0.5, edgecolors='none',
+            label='Valid Triangle'
         )
         THREEDEE.set_title(title, fontsize=30)
         THREEDEE.set_xlabel(l1, fontsize=16)
         THREEDEE.set_ylabel(l2, fontsize=16)
         THREEDEE.set_zlabel(l3, fontsize=16)
+        red_patch = mpatches.Patch(color='red', label='Valid Triangle')
+        blue_patch = mpatches.Patch(color='blue', label='Invalid Triangle')
+        THREEDEE.legend(handles=[red_patch, blue_patch])
         plt.savefig(IMAGE_T_FILES[count][counter], dpi=200, bbox_inches='tight')
         print("Generated %s file" % IMAGE_T_FILES[count][counter])
 
@@ -114,15 +123,25 @@ for count, RT_FILES in enumerate(DATASET_RT_FILES):
             l3 = 'Side 2^2 + Side3^2'
             title = "Right Triangle with Sum of Side Squares"
 
+        colors1 = np.where(DF['validity'] == 1, 'red', 'blue')
         THREEDEE.scatter(
             x, y, z,
-            c=DF['validity'],
+            c=colors,
             s=60,
-            cmap='PRGn'
+            alpha=0.5, edgecolors='none'
         )
         THREEDEE.set_title(title, fontsize=30)
         THREEDEE.set_xlabel(l1, fontsize=16)
         THREEDEE.set_ylabel(l2, fontsize=16)
         THREEDEE.set_zlabel(l3, fontsize=16)
+        red_patch = mpatches.Patch(
+            color='red',
+            label='Valid Right Angle Triangle'
+        )
+        blue_patch = mpatches.Patch(
+            color='blue',
+            label='Invalid Right Angle Triangle'
+        )
+        THREEDEE.legend(handles=[red_patch, blue_patch])
         plt.savefig(IMAGE_RT_FILES[count][counter], dpi=200, bbox_inches='tight')
         print("Generated %s file" % IMAGE_RT_FILES[count][counter])
