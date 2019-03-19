@@ -19,7 +19,7 @@ from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 
 # local python import
-from utils import T_FILE_NAMES, RT_FILE_NAMES
+from utils import EXP6_T_FILE_NAMES, EXP6_RT_FILE_NAMES
 from utils import T_LABELS, RT_LABELS
 
 # Classifier related constants
@@ -62,10 +62,10 @@ def main():
     """Main function."""
 
     testing_dataset = []
-    for filename in T_FILE_NAMES:
+    for filename in EXP6_T_FILE_NAMES:
         testing_dataset.append(pnd.read_csv(filename))
 
-    for filename in RT_FILE_NAMES:
+    for filename in EXP6_RT_FILE_NAMES:
         testing_dataset.append(pnd.read_csv(filename))
 
     for counter in range(len(testing_dataset)):

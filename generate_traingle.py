@@ -6,7 +6,7 @@ from numpy.random import randint
 import csv
 
 # local python import
-from utils import RT_FILE_NAMES, T_FILE_NAMES
+from utils import EXP6_RT_FILE_NAMES, EXP6_T_FILE_NAMES
 from utils import RT_LABELS, T_LABELS
 
 
@@ -32,8 +32,8 @@ def check_right_triangle(a, b, c):
 def create_triangle_datasets():
     """Create normal triangle datasets."""
 
-    for i in range(len(T_FILE_NAMES)):
-        FP = open(T_FILE_NAMES[i], 'w')
+    for i in range(len(EXP6_T_FILE_NAMES)):
+        FP = open(EXP6_T_FILE_NAMES[i], 'w')
         FILE_WRITER = csv.writer(
             FP, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL
         )
@@ -59,8 +59,8 @@ def create_triangle_datasets():
 
 def create_rt_datasets():
     """Create right angle triangle datasets."""
-    for i in range(len(RT_FILE_NAMES)):
-        FP = open(RT_FILE_NAMES[i], 'w')
+    for i in range(len(EXP6_RT_FILE_NAMES)):
+        FP = open(EXP6_RT_FILE_NAMES[i], 'w')
         FILE_WRITER = csv.writer(
             FP, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL
         )
