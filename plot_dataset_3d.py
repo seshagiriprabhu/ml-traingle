@@ -123,7 +123,7 @@ for count, RT_FILES in enumerate(DATASET_RT_FILES):
             l3 = 'Side 2^2 + Side3^2'
             title = "Right Triangle with Sum of Side Squares"
 
-        colors1 = np.where(DF['validity'] == 1, 'red', 'blue')
+        colors = np.where(DF['validity'] == 1, 'red', 'blue')
         THREEDEE.scatter(
             x, y, z,
             c=colors,

@@ -9,6 +9,9 @@ import csv
 from utils import EXP6_RT_FILE_NAMES, EXP6_T_FILE_NAMES
 from utils import RT_LABELS, T_LABELS
 
+EXP_T_FILE_NAMES = EXP6_T_FILE_NAMES
+EXP2_RT_FILE_NAMES = EXP6_RT_FILE_NAMES
+
 
 def check_triangle(a, b, c):
     """The sum of the lengths of any two sides of a triangle is greater than
@@ -32,8 +35,8 @@ def check_right_triangle(a, b, c):
 def create_triangle_datasets():
     """Create normal triangle datasets."""
 
-    for i in range(len(EXP6_T_FILE_NAMES)):
-        FP = open(EXP6_T_FILE_NAMES[i], 'w')
+    for i in range(len(EXP_T_FILE_NAMES)):
+        FP = open(EXP_T_FILE_NAMES[i], 'w')
         FILE_WRITER = csv.writer(
             FP, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL
         )
@@ -109,8 +112,13 @@ def create_rt_datasets():
                 attributes = [a**2, b**2, c**2, validity]
             elif i == 3:
                 attributes = [a + b, a + c, b + c, validity]
-            else:
+            elif i == 4:
                 attributes = [a**2 + b**2, a**2 + c**2, b**2 + c**2, validity]
+            else:
+                attributes = [
+                    a**2, b**2, c**2, a**2 + b**2,
+                    a**2 + c**2, b**2 + c**2, validity
+                ]
 
             FILE_WRITER.writerow(attributes)
 

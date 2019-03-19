@@ -22,6 +22,8 @@ from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from utils import EXP6_T_FILE_NAMES, EXP6_RT_FILE_NAMES
 from utils import T_LABELS, RT_LABELS
 
+EXP_T_FILE_NAMES, EXP_RT_FILE_NAMES = EXP6_T_FILE_NAMES, EXP6_RT_FILE_NAMES
+
 # Classifier related constants
 NAMES = [
     "Nearest Neighbors",
@@ -62,10 +64,10 @@ def main():
     """Main function."""
 
     testing_dataset = []
-    for filename in EXP6_T_FILE_NAMES:
+    for filename in EXP_T_FILE_NAMES:
         testing_dataset.append(pnd.read_csv(filename))
 
-    for filename in EXP6_RT_FILE_NAMES:
+    for filename in EXP_RT_FILE_NAMES:
         testing_dataset.append(pnd.read_csv(filename))
 
     for counter in range(len(testing_dataset)):

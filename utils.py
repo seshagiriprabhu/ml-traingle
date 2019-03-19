@@ -92,10 +92,11 @@ EXP6_RT_DATASET2 = os.path.join(EXP6_DIR, "rt_dataset2.csv")
 EXP6_RT_DATASET3 = os.path.join(EXP6_DIR, "rt_dataset3.csv")
 EXP6_RT_DATASET4 = os.path.join(EXP6_DIR, "rt_dataset4.csv")
 EXP6_RT_DATASET5 = os.path.join(EXP6_DIR, "rt_dataset5.csv")
+EXP6_RT_DATASET6 = os.path.join(EXP6_DIR, "rt_dataset6.csv")
 EXP6_RT_FILE_NAMES = [
     EXP6_RT_DATASET1, EXP6_RT_DATASET2,
     EXP6_RT_DATASET3, EXP6_RT_DATASET4,
-    EXP6_RT_DATASET5
+    EXP6_RT_DATASET5, EXP6_RT_DATASET6
 ]
 
 
@@ -158,10 +159,11 @@ IMG6_RT_IMAGE2 = os.path.join(IMG6_DIR, "rt_image2.png")
 IMG6_RT_IMAGE3 = os.path.join(IMG6_DIR, "rt_image3.png")
 IMG6_RT_IMAGE4 = os.path.join(IMG6_DIR, "rt_image4.png")
 IMG6_RT_IMAGE5 = os.path.join(IMG6_DIR, "rt_image5.png")
+IMG6_RT_IMAGE6 = os.path.join(IMG6_DIR, "rt_image6.png")
 IMG6_RT_FILES = [
     IMG6_RT_IMAGE1, IMG6_RT_IMAGE2,
     IMG6_RT_IMAGE3, IMG6_RT_IMAGE4,
-    IMG6_RT_IMAGE5
+    IMG6_RT_IMAGE5, IMG6_RT_IMAGE6
 ]
 
 
@@ -179,4 +181,12 @@ RT_LABEL2 = ['side1', 'side2', 'side3', 'side1^2', 'side2^2', 'side3^2', 'validi
 RT_LABEL3 = ['side1^2', 'side2^2', 'side3^2', 'validity']
 RT_LABEL4 = ['side1+side2', 'side1+side3', 'side2+side3', 'validity']
 RT_LABEL5 = ['side1^2+side2^2', 'side1^2+side3^2', 'side2^2+side3^2', 'validity']
-RT_LABELS = [RT_LABEL1, RT_LABEL2, RT_LABEL3, RT_LABEL4, RT_LABEL5]
+RT_LABEL6 = [
+    'side1^2', 'side2^2', 'side3^2',
+    'side1^2+side2^2', 'side1^2+side3^2',
+    'side2^2+side3^2', 'validity'
+]
+RT_LABELS = [
+    RT_LABEL1, RT_LABEL2, RT_LABEL3,
+    RT_LABEL4, RT_LABEL5, RT_LABEL6
+]

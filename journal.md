@@ -220,15 +220,15 @@ New datasets are added with different attributes.
 | Right Triangle (RT 3) - [rt_dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image3.png) |
 | Right Triangle (RT 4) - [rt_dataset4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset4.csv) | (a + b, a + c, b + c, validity) | [rt_image4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image4.png) |
 | Right Triangle (RT 5) - [rt_dataset4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image5.png) |
-
+| Right Triangle (RT 6) - [rt_dataset4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image6.png) |
 ### Results
-|                   | T 1  | T 2  | T 3  | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 |
-| ----------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
-| kNN               | 0.95 | 0.94 | 0.89 | 0.82 | 0.74 | 0.76 | 0.79 | 0.73 |
-| Gaussian Process  | 0.44 | 0.46 | 0.53 | 0.54 | 0.53 | 0.56 | 0.55 | 0.56 |
-| Decision Tree     | 0.82 | 0.86 | 0.77 | 0.81 | 0.77 | 0.81 | 0.72 | 0.66 |
-| Random Forest     | 0.82 | 0.84 | 0.80 | 0.83 | 0.79 | 0.81 | 0.69 | 0.66 |
-| MLP               | 0.98 | 0.68 | 0.93 | 0.69 | 0.55 | 0.69 | 0.78 | 0.61 |
-| AdaBoost          | 0.77 | 0.90 | 0.61 | 0.88 | 0.81 | 0.79 | 0.72 | 0.69 |
-| Naive Bayes       | 0.84 | 0.73 | 0.68 | 0.61 | 0.66 | 0.62 | 0.60 | 0.58 |
-| QDA               | 0.85 | 0.56 | 0.80 | 0.74 | 0.78 | 0.75 | 0.72 | 0.99 |
+|                   | T 1  | T 2  | T 3  | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
+| ----------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| kNN               | 0.95 | 0.94 | 0.89 | 0.82 | 0.74 | 0.76 | 0.79 | 0.73 | 0.76 |
+| Gaussian Process  | 0.44 | 0.46 | 0.53 | 0.54 | 0.53 | 0.56 | 0.55 | 0.56 | 0.48 |
+| Decision Tree     | 0.82 | 0.86 | 0.77 | 0.81 | 0.77 | 0.81 | 0.72 | 0.66 | 0.77 |
+| Random Forest     | 0.82 | 0.84 | 0.80 | 0.83 | 0.79 | 0.81 | 0.69 | 0.66 | 0.74 |
+| MLP               | 0.98 | 0.68 | 0.93 | 0.69 | 0.55 | 0.69 | 0.78 | 0.61 | 0.67 |
+| AdaBoost          | 0.77 | 0.90 | 0.61 | 0.88 | 0.81 | 0.79 | 0.72 | 0.69 | 0.82 |
+| Naive Bayes       | 0.84 | 0.73 | 0.68 | 0.61 | 0.66 | 0.62 | 0.60 | 0.58 | 0.66 |
+| QDA               | 0.85 | 0.56 | 0.80 | 0.74 | 0.78 | 0.75 | 0.72 | 0.99 | 0.75 |
