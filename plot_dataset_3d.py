@@ -87,12 +87,11 @@ for count, RT_FILES in enumerate(DATASET_RT_FILES):
             print("File %s already exists!" % IMAGE_RT_FILES[count][counter])
             continue
 
-        # Python can't handle large integer of square sides
-        if counter == 2 and count < 6:
+        # rt_dataset2.csv has long values which matplotlib cannot handle
+        if counter == 2 and count < 1:
             continue
 
         DF = pnd.read_csv(dataset)
-
         THREEDEE = plt.figure(figsize=(19.20, 10.80)).gca(projection='3d')
 
         if counter == 0 or counter == 1:
