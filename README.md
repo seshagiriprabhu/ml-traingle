@@ -34,5 +34,5 @@ sudo apt-get install python-tk
 ## Plotting datasets
 `plot_dataset_3d.py` can be run to plot the triangle and right triangles.
 ```bash
-python plot_dataset_3d.py
+python plot_dataset_3d_show.py
 ```
