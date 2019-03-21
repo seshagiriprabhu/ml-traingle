@@ -10,7 +10,7 @@ Classifiers = [
 ]
 ```
 
-## Installing python dependences
+## Install python dependences
 `scikit`, `numpy`, `pandas`, `matplotlib` are the third party python libraries used.
 ```bash
 pip install -r requirements.txt
@@ -31,8 +31,10 @@ program to 3D plot the triangle and right triangle datasets.
 sudo apt-get install python-tk
 ```
 
-## Plotting datasets
-`plot_dataset_3d.py` can be run to plot the triangle and right triangles.
+## Plot datasets
+`plot_dataset_3d_show.py` can be used to plot 3D datasets
+of all the experiments. `python-tk` is required to be installed in-order
+to display the screen in which the `matplot3d` displays the plot.
 ```bash
 python plot_dataset_3d_show.py
 ```
