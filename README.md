@@ -17,11 +17,20 @@ pip install -r requirements.txt
 ```
 
 ## Run the program
-The program `classifier_comparision.py` uses `training.csv` files which
-contains 1000 entries, 80% of the entries are used for training and 20%
-is for testing the classifier.
+The program `classifier_comparision_t.py` uses triangle dataset files 
+(`t_dataset[1-3].py`) which contains 1000 entries upto experiment 6 and 
+1 million for experiment 7, 80% of the entries are used for training and
+20% is for testing the classifier.
 ```bash
-$ python classifier_comparision.py
+$ python classifier_comparision_t.py
+```
+
+The program `classifier_comparision_rt.py` uses right triangle dataset files 
+(`rt_dataset[1-3].py`) which contains 1000 entries upto experiment 6 and 
+1 million for experiment 7, 80% of the entries are used for training and
+20% is for testing the classifier.
+```bash
+$ python classifier_comparision_rt.py
 ```
 
 ## (Optional) Ubuntu dependences

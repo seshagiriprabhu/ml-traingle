@@ -4,6 +4,51 @@ for other files to run.
 """
 import os
 
+from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neural_network import MLPClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
+
+
+# Classifier related constants
+CLASSIFIER_NAMES = [
+    "Nearest Neighbors",
+    # "Linear SVM",
+    # "RBF SVM",
+    # "Gaussian Process",
+    "Decision Tree",
+    "Random Forest",
+    "Neural Net",
+    "AdaBoost",
+    "Naive Bayes",
+    "QDA"
+]
+
+CLASSIFIERS = [
+    KNeighborsClassifier(3),
+    # SVC(kernel="linear", C=0.025),
+    # SVC(gamma=2, C=1),
+    # GaussianProcessClassifier(1.0 * RBF(1.0), copy_X_train=False),
+    DecisionTreeClassifier(max_depth=5),
+    RandomForestClassifier(max_depth=5, n_estimators=10, max_features=1),
+    MLPClassifier(
+        activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+        beta_2=0.999, early_stopping=False, epsilon=1e-08,
+        hidden_layer_sizes=(100,), learning_rate='constant',
+        learning_rate_init=0.001, max_iter=200, momentum=0.9,
+        nesterovs_momentum=True, power_t=0.5, random_state=None,
+        shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
+        verbose=False, warm_start=False
+    ),
+    AdaBoostClassifier(),
+    GaussianNB(),
+    QuadraticDiscriminantAnalysis()
+]
+
+
 # Directory related constants
 APP_DIR = os.path.dirname(os.path.realpath(__file__))
 
@@ -14,6 +59,8 @@ EXP2_DIR = os.path.join(DATA_DIR, 'experiment2')
 EXP3_DIR = os.path.join(DATA_DIR, 'experiment3')
 EXP4_DIR = os.path.join(DATA_DIR, 'experiment4')
 EXP5_DIR = os.path.join(DATA_DIR, 'experiment5')
+EXP6_DIR = os.path.join(DATA_DIR, 'experiment6')
+EXP7_DIR = os.path.join(DATA_DIR, 'experiment7')
 
 # Image directory constants
 IMAGE_DIR = os.path.join(APP_DIR, 'image')
@@ -23,6 +70,7 @@ IMG3_DIR = os.path.join(IMAGE_DIR, 'exp3-image')
 IMG4_DIR = os.path.join(IMAGE_DIR, 'exp4-image')
 IMG5_DIR = os.path.join(IMAGE_DIR, 'exp5-image')
 IMG6_DIR = os.path.join(IMAGE_DIR, 'exp6-image')
+IMG7_DIR = os.path.join(IMAGE_DIR, 'exp7-image')
 
 
 # Experiment 1: Triangle dataset constants
@@ -78,7 +126,6 @@ EXP5_RT_FILE_NAMES = [
 ]
 
 # Experiment 6: Triangle dataset constants
-EXP6_DIR = os.path.join(DATA_DIR, 'experiment6')
 EXP6_T_DATASET1 = os.path.join(EXP6_DIR, "t_dataset1.csv")
 EXP6_T_DATASET2 = os.path.join(EXP6_DIR, "t_dataset2.csv")
 EXP6_T_DATASET3 = os.path.join(EXP6_DIR, "t_dataset3.csv")
@@ -99,6 +146,26 @@ EXP6_RT_FILE_NAMES = [
     EXP6_RT_DATASET5, EXP6_RT_DATASET6
 ]
 
+# Experiment 7: Triangle dataset constants
+EXP7_T_DATASET1 = os.path.join(EXP7_DIR, "t_dataset1.csv")
+EXP7_T_DATASET2 = os.path.join(EXP7_DIR, "t_dataset2.csv")
+EXP7_T_DATASET3 = os.path.join(EXP7_DIR, "t_dataset3.csv")
+EXP7_T_FILE_NAMES = [
+    EXP7_T_DATASET1, EXP7_T_DATASET2, EXP7_T_DATASET3
+]
+
+# Experiment 7: Right angle triangle dataset constants
+EXP7_RT_DATASET1 = os.path.join(EXP7_DIR, "rt_dataset1.csv")
+EXP7_RT_DATASET2 = os.path.join(EXP7_DIR, "rt_dataset2.csv")
+EXP7_RT_DATASET3 = os.path.join(EXP7_DIR, "rt_dataset3.csv")
+EXP7_RT_DATASET4 = os.path.join(EXP7_DIR, "rt_dataset4.csv")
+EXP7_RT_DATASET5 = os.path.join(EXP7_DIR, "rt_dataset5.csv")
+EXP7_RT_DATASET6 = os.path.join(EXP7_DIR, "rt_dataset6.csv")
+EXP7_RT_FILE_NAMES = [
+    EXP7_RT_DATASET1, EXP7_RT_DATASET2,
+    EXP7_RT_DATASET3, EXP7_RT_DATASET4,
+    EXP7_RT_DATASET5, EXP7_RT_DATASET6
+]
 
 # Experiment 1 related image file constants
 IMG1_T_IMAGE1 = os.path.join(IMG1_DIR, "t_image1.png")
@@ -166,6 +233,23 @@ IMG6_RT_FILES = [
     IMG6_RT_IMAGE5, IMG6_RT_IMAGE6
 ]
 
+# Experiment 7 related image file constants
+IMG7_T_IMAGE1 = os.path.join(IMG7_DIR, "t_image1.png")
+IMG7_T_IMAGE2 = os.path.join(IMG7_DIR, "t_image2.png")
+IMG7_T_IMAGE3 = os.path.join(IMG7_DIR, "t_image3.png")
+IMG7_T_FILES = [IMG7_T_IMAGE1, IMG7_T_IMAGE2, IMG7_T_IMAGE3]
+
+IMG7_RT_IMAGE1 = os.path.join(IMG7_DIR, "rt_image1.png")
+IMG7_RT_IMAGE2 = os.path.join(IMG7_DIR, "rt_image2.png")
+IMG7_RT_IMAGE3 = os.path.join(IMG7_DIR, "rt_image3.png")
+IMG7_RT_IMAGE4 = os.path.join(IMG7_DIR, "rt_image4.png")
+IMG7_RT_IMAGE5 = os.path.join(IMG7_DIR, "rt_image5.png")
+IMG7_RT_IMAGE6 = os.path.join(IMG7_DIR, "rt_image6.png")
+IMG7_RT_FILES = [
+    IMG7_RT_IMAGE1, IMG7_RT_IMAGE2,
+    IMG7_RT_IMAGE3, IMG7_RT_IMAGE4,
+    IMG7_RT_IMAGE5, IMG7_RT_IMAGE6
+]
 
 # Label constants
 T_LABEL1 = ['side1', 'side2', 'side3', 'validity']
