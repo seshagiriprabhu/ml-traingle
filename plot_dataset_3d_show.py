@@ -10,41 +10,7 @@ import matplotlib.patches as mpatches
 from mpl_toolkits.mplot3d import Axes3D
 
 # local python import
-from utils import EXP1_T_FILE_NAMES, EXP2_T_FILE_NAMES
-from utils import EXP3_T_FILE_NAMES, EXP4_T_FILE_NAMES
-from utils import EXP5_T_FILE_NAMES, EXP6_T_FILE_NAMES
-
-from utils import EXP2_RT_FILE_NAMES
-from utils import EXP3_RT_FILE_NAMES, EXP4_RT_FILE_NAMES
-from utils import EXP5_RT_FILE_NAMES, EXP6_RT_FILE_NAMES
-
-from utils import IMG1_T_FILES, IMG2_T_FILES, IMG3_T_FILES
-from utils import IMG4_T_FILES, IMG5_T_FILES, IMG6_T_FILES
-
-from utils import IMG2_RT_FILES, IMG3_RT_FILES
-from utils import IMG4_RT_FILES, IMG5_RT_FILES, IMG6_RT_FILES
-
-DATASET_T_FILES = [
-    EXP1_T_FILE_NAMES, EXP2_T_FILE_NAMES,
-    EXP3_T_FILE_NAMES, EXP4_T_FILE_NAMES,
-    EXP5_T_FILE_NAMES, EXP6_T_FILE_NAMES
-]
-
-DATASET_RT_FILES = [
-    EXP2_RT_FILE_NAMES,
-    EXP3_RT_FILE_NAMES, EXP4_RT_FILE_NAMES,
-    EXP5_RT_FILE_NAMES, EXP6_RT_FILE_NAMES
-]
-
-IMAGE_T_FILES = [
-    IMG1_T_FILES, IMG2_T_FILES, IMG3_T_FILES,
-    IMG4_T_FILES, IMG5_T_FILES, IMG6_T_FILES
-]
-
-IMAGE_RT_FILES = [
-    IMG2_RT_FILES, IMG3_RT_FILES, IMG4_RT_FILES,
-    IMG5_RT_FILES, IMG6_RT_FILES
-]
+from utils import DATASET_T_FILES, DATASET_RT_FILES
 
 mpl.rcParams['legend.fontsize'] = 10
 
