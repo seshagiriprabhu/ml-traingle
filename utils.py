@@ -54,6 +54,7 @@ APP_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # Dataset directory constants
 DATA_DIR = os.path.join(APP_DIR, 'data')
+EXP_DIR = os.path.join(DATA_DIR, 'experiment')
 EXP1_DIR = os.path.join(DATA_DIR, 'experiment1')
 EXP2_DIR = os.path.join(DATA_DIR, 'experiment2')
 EXP3_DIR = os.path.join(DATA_DIR, 'experiment3')
@@ -64,6 +65,7 @@ EXP7_DIR = os.path.join(DATA_DIR, 'experiment7')
 
 # Image directory constants
 IMAGE_DIR = os.path.join(APP_DIR, 'image')
+IMG_DIR = os.path.join(IMAGE_DIR, 'exp-image')
 IMG1_DIR = os.path.join(IMAGE_DIR, 'exp1-image')
 IMG2_DIR = os.path.join(IMAGE_DIR, 'exp2-image')
 IMG3_DIR = os.path.join(IMAGE_DIR, 'exp3-image')
@@ -72,6 +74,9 @@ IMG5_DIR = os.path.join(IMAGE_DIR, 'exp5-image')
 IMG6_DIR = os.path.join(IMAGE_DIR, 'exp6-image')
 IMG7_DIR = os.path.join(IMAGE_DIR, 'exp7-image')
 
+# First N: RT dataset
+EXP_RT_DATASET1 = os.path.join(EXP_DIR, 'rt_dataset1.csv')
+EXP_RT_FILE_NAMES = [EXP_RT_DATASET1]
 
 # Experiment 1: Triangle dataset constants
 EXP1_T_DATASET = os.path.join(EXP1_DIR, 'triangle.csv')
@@ -166,6 +171,10 @@ EXP7_RT_FILE_NAMES = [
     EXP7_RT_DATASET3, EXP7_RT_DATASET4,
     EXP7_RT_DATASET5, EXP7_RT_DATASET6
 ]
+
+# First N: RT dataset
+IMG_RT_IMAGE1 = os.path.join(IMG_DIR, "rt_image1.png")
+IMG_RT_FILES = [IMG_RT_IMAGE1]
 
 # Experiment 1 related image file constants
 IMG1_T_IMAGE1 = os.path.join(IMG1_DIR, "t_image1.png")
@@ -283,7 +292,8 @@ DATASET_T_FILES = [
 
 DATASET_RT_FILES = [
     EXP2_RT_FILE_NAMES, EXP3_RT_FILE_NAMES, EXP4_RT_FILE_NAMES,
-    EXP5_RT_FILE_NAMES, EXP6_RT_FILE_NAMES, EXP7_RT_FILE_NAMES
+    EXP5_RT_FILE_NAMES, EXP6_RT_FILE_NAMES, EXP7_RT_FILE_NAMES,
+    EXP_RT_FILE_NAMES
 ]
 
 IMAGE_T_FILES = [
@@ -294,5 +304,6 @@ IMAGE_T_FILES = [
 
 IMAGE_RT_FILES = [
     IMG2_RT_FILES, IMG3_RT_FILES, IMG4_RT_FILES,
-    IMG5_RT_FILES, IMG6_RT_FILES, IMG7_RT_FILES
+    IMG5_RT_FILES, IMG6_RT_FILES, IMG7_RT_FILES,
+    IMG_RT_FILES
 ]

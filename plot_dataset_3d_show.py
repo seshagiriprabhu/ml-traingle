@@ -15,6 +15,9 @@ from utils import DATASET_T_FILES, DATASET_RT_FILES
 mpl.rcParams['legend.fontsize'] = 10
 
 for count, T_FILES in enumerate(DATASET_T_FILES):
+    if count < 4 or count > 5:
+        continue
+
     for counter, dataset in enumerate(T_FILES):
         if counter > 0:
             continue
@@ -49,6 +52,9 @@ for count, T_FILES in enumerate(DATASET_T_FILES):
 
 
 for count, RT_FILES in enumerate(DATASET_RT_FILES):
+    if count < 3 or count == 5:
+        continue
+
     for counter, dataset in enumerate(RT_FILES):
         if counter > 0:
             continue
@@ -56,10 +62,12 @@ for count, RT_FILES in enumerate(DATASET_RT_FILES):
         DF = pnd.read_csv(dataset)
         THREEDEE = plt.figure(figsize=(19.20, 10.80)).gca(projection='3d')
 
-        if counter == 0 or counter == 1:
-            x, y, z = DF['side1'], DF['side2'], DF['side3']
-            l1, l2, l3 = 'Side 1', 'Side 2', 'Side 3'
+        x, y, z = DF['side1'], DF['side2'], DF['side3']
+        l1, l2, l3 = 'Side 1', 'Side 2', 'Side 3'
+        if count < 6:
             title = "Right Triangle Experiment #" + str(count + 1)
+        else:
+            title = "First 1000 valid right triangles"
 
         colors = np.where(DF['validity'] == 1, 'red', 'blue')
         THREEDEE.scatter(
