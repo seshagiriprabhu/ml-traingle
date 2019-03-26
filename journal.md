@@ -210,13 +210,13 @@ New datasets are added with different attributes.
 ### Triangle Results
 |                   | T 1  | T 2  | T 3  |
 | ----------------- | ---- | ---- | ---- |
-| kNN               | 0.95 | 0.94 | 0.89 |
-| Decision Tree     | 0.82 | 0.86 | 0.77 |
-| Random Forest     | 0.82 | 0.84 | 0.80 |
-| MLP               | 0.98 | 0.68 | 0.93 |
-| AdaBoost          | 0.77 | 0.90 | 0.61 |
-| Naive Bayes       | 0.84 | 0.73 | 0.68 |
-| QDA               | 0.85 | 0.56 | 0.80 |
+| kNN               | 0.96 | 0.94 | 0.94 |
+| Decision Tree     | 0.83 | 0.88 | 0.83 |
+| Random Forest     | 0.86 | 0.88 | 0.86 |
+| MLP               | 0.94 | 0.47 | 0.94 |
+| AdaBoost          | 0.78 | 0.88 | 0.66 |
+| Naive Bayes       | 0.83 | 0.78 | 0.76 |
+| QDA               | 0.87 | 0.71 | 0.87 |
 
 
 ### Right Triangle Dataset description
@@ -232,13 +232,13 @@ New datasets are added with different attributes.
 ### Right Triangle Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
 | ----------------- | ---- | ---- | ---- | ---- | ---- | ---- |
-| kNN               | 0.82 | 0.74 | 0.76 | 0.79 | 0.73 | 0.76 |
-| Decision Tree     | 0.81 | 0.77 | 0.81 | 0.72 | 0.66 | 0.77 |
-| Random Forest     | 0.83 | 0.79 | 0.81 | 0.69 | 0.66 | 0.74 |
-| MLP               | 0.69 | 0.55 | 0.69 | 0.78 | 0.61 | 0.67 |
-| AdaBoost          | 0.88 | 0.81 | 0.79 | 0.72 | 0.69 | 0.82 |
-| Naive Bayes       | 0.61 | 0.66 | 0.62 | 0.60 | 0.58 | 0.66 |
-| QDA               | 0.74 | 0.78 | 0.75 | 0.72 | 0.99 | 0.75 |
+| kNN               | 0.51 | 0.52 | 0.52 | 0.49 | 0.49 | 0.49 |
+| Decision Tree     | 0.56 | 0.56 | 0.56 | 0.54 | 0.48 | 0.56 |
+| Random Forest     | 0.50 | 0.54 | 0.53 | 0.47 | 0.48 | 0.49 |
+| MLP               | 0.48 | 0.46 | 0.42 | 0.51 | 0.50 | 0.42 |
+| AdaBoost          | 0.48 | 0.48 | 0.49 | 0.45 | 0.47 | 0.51 |
+| Naive Bayes       | 0.52 | 0.46 | 0.46 | 0.48 | 0.47 | 0.47 |
+| QDA               | 0.51 | 0.45 | 0.47 | 0.51 | 0.47 | 0.48 |
 
 ## Experiment #7
 Commit - [e96b3f334f60ba4bc9212cc4f0085acb77647397](https://github.com/seshagiriprabhu/ml-traingle/tree/e96b3f334f60ba4bc9212cc4f0085acb77647397)
