@@ -178,13 +178,13 @@ to (a, b, c).
 ### Results
 |                   | RT 1 | RT 2 | RT 3 |
 | ---               | ---- | ---- | ---- |
-| kNN               | 0.80 | 0.77 | 0.79 |
-| Decision Tree     | 0.77 | 0.77 | 0.74 |
-| Random Forest     | 0.83 | 0.78 | 0.82 |
-| MLP               | 0.68 | 0.58 | 0.63 |
-| AdaBoost          | 0.75 | 0.81 | 0.84 |
-| Naive Bayes       | 0.63 | 0.68 | 0.64 |
-| QDA               | 0.71 | 0.80 | 0.72 |
+| kNN               | 0.45 | 0.48 | 0.48 |
+| Decision Tree     | 0.54 | 0.54 | 0.54 |
+| Random Forest     | 0.52 | 0.55 | 0.51 |
+| MLP               | 0.50 | 0.48 | 0.56 |
+| AdaBoost          | 0.56 | 0.54 | 0.54 |
+| Naive Bayes       | 0.55 | 0.47 | 0.47 |
+| QDA               | 0.54 | 0.51 | 0.46 |
 
 ### Special Notes about this RT dataset
 1. If (a, b, c) values are high, then the accuracy of classifiers
