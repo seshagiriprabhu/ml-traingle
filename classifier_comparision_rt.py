@@ -31,7 +31,7 @@ def main():
 
         print("-" * 40)
         print("Dataset: Right Angle Triangle")
-        print(RT_LABELS[counter - 3])
+        print(RT_LABELS[counter])
         print("-" * 40)
 
         for name, classifier in zip(CLASSIFIER_NAMES, CLASSIFIERS):

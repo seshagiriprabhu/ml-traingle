@@ -244,7 +244,7 @@ New datasets are added with different attributes.
 Commit - [e96b3f334f60ba4bc9212cc4f0085acb77647397](https://github.com/seshagiriprabhu/ml-traingle/tree/e96b3f334f60ba4bc9212cc4f0085acb77647397)
 
 Triangle and Right triangle is generated the same way as in Experiment #6.
-There are 1 million entries in the triangle and right triangle datasets.
+There are 100,000 entries in the triangle and right triangle datasets.
 
 ### Triangle Dataset description
 | Dataset | Attributes | 3D plot |
@@ -257,13 +257,13 @@ There are 1 million entries in the triangle and right triangle datasets.
 ### Triangle Results
 |                   | T 1  | T 2  | T 3  |
 | ----------------- | ---- | ---- | ---- |
-| kNN               | 0.98 | 0.98 | 0.98 |
-| Decision Tree     | 0.80 | 0.88 | 0.84 |
-| Random Forest     | 0.81 | 0.88 | 0.83 |
-| MLP               | 1.00 | 0.99 | 0.98 |
-| AdaBoost          | 0.78 | 0.86 | 0.68 |
-| Naive Bayes       | 0.80 | 0.74 | 0.72 |
-| QDA               | 0.82 | 0.78 | 0.82 |
+| kNN               | 0.99 | 0.98 | 0.98 |
+| Decision Tree     | 0.79 | 0.86 | 0.84 |
+| Random Forest     | 0.80 | 0.87 | 0.85 |
+| MLP               | 0.99 | 1.00 | 0.98 |
+| AdaBoost          | 0.78 | 0.85 | 0.69 |
+| Naive Bayes       | 0.80 | 0.75 | 0.72 |
+| QDA               | 0.82 | 0.63 | 0.82 |
 
 
 ### Right Triangle Dataset description
@@ -279,10 +279,10 @@ There are 1 million entries in the triangle and right triangle datasets.
 ### Right Triangle Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
 | ----------------- | ---- | ---- | ---- | ---- | ---- | ---- |
-| kNN               | 0.98 | 0.98 | 0.98 | 0.97 | 0.98 | 0.98 |
-| Decision Tree     | 0.78 | 0.78 | 0.78 | 0.73 | 0.73 | 0.78 |
-| Random Forest     | 0.81 | 0.82 | 0.82 | 0.72 | 0.71 | 0.74 |
-| MLP               | 0.96 | 0.80 | 0.86 | 0.95 | 0.69 | 0.59 |
-| AdaBoost          | 0.82 | 0.83 | 0.73 | 0.72 | 0.71 | 0.83 |
-| Naive Bayes       | 0.65 | 0.66 | 0.66 | 0.58 | 0.53 | 0.66 |
-| QDA               | 0.76 | 0.79 | 0.75 | 0.76 | 0.75 | 0.72 |
+| kNN               | 0.65 | 0.72 | 0.72 | 0.67 | 0.72 | 0.72 |
+| Decision Tree     | 0.52 | 0.52 | 0.52 | 0.51 | 0.51 | 0.52 |
+| Random Forest     | 0.52 | 0.52 | 0.52 | 0.51 | 0.51 | 0.52 |
+| MLP               | 0.51 | 0.50 | 0.52 | 0.51 | 0.50 | 0.51 |
+| AdaBoost          | 0.50 | 0.52 | 0.52 | 0.51 | 0.51 | 0.52 |
+| Naive Bayes       | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 |
+| QDA               | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 |
