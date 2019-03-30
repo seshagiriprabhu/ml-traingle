@@ -3,7 +3,7 @@
 for other files to run.
 """
 import os
-
+from numpy.random import randint
 from sklearn.naive_bayes import GaussianNB
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -307,3 +307,41 @@ IMAGE_RT_FILES = [
     IMG5_RT_FILES, IMG6_RT_FILES, IMG7_RT_FILES,
     IMG_RT_FILES
 ]
+
+
+def check_right_triangle(a, b, c):
+    """Pythagoras theorm."""
+    if a**2 + b**2 == c**2 or \
+            a**2 + c**2 == b**2 or \
+            c**2 + b**2 == a**2:
+        return 1
+
+    return 0
+
+
+def shuffle(a, b, c):
+    rand = randint(3)
+    if rand == 0:
+        return a, b, c
+    elif rand == 1:
+        return c, a, b
+    else:
+        return b, c, a
+
+
+# Returns floor of square root of x
+def floor_sqrt(x):
+
+    # Base cases
+    if (x == 0 or x == 1):
+        return x
+
+    # Staring from 1, try all numbers until
+    # i*i is greater than or equal to x.
+    i = result = 1
+    while result <= x:
+
+        i += 1
+        result = i * i
+
+    return i - 1

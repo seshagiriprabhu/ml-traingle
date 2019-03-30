@@ -3,35 +3,28 @@
 A program to generate traingle and right traingle dataset
 """
 from numpy.random import randint
+from numpy import sqrt
 import csv
 
 # local python import
 from utils import EXP_RT_FILE_NAMES
 from utils import RT_LABELS
 
-
-def check_right_triangle(a, b, c):
-    """Pythagoras theorm."""
-    if a**2 + b**2 == c**2 or \
-            a**2 + c**2 == b**2 or \
-            c**2 + b**2 == a**2:
-        return 1
-
-    return 0
+from utils import check_right_triangle
+from utils import shuffle, floor_sqrt
 
 
-def shuffle(a, b, c):
-    rand = randint(3)
-    if rand == 0:
-        return a, b, c
-    elif rand == 1:
-        return c, a, b
-    else:
-        return b, c, a
+MAX_LINES = 1000
+
+RAND_TUPLES = [
+    (1, 999), (1000, 1999), (2000, 2999), (3000, 3999),
+    (4000, 4999), (5000, 5999), (6000, 6999),
+    (7000, 7999), (8000, 8999), (9000, 9999)
+]
 
 
-def create_rt_datasets():
-    """Create right angle triangle datasets."""
+def create_valid_rt_dataset():
+    """Create valid right angle triangle datasets."""
 
     # File pointer for RT dataset 1
     FP = open(EXP_RT_FILE_NAMES[0], 'w')
@@ -40,30 +33,71 @@ def create_rt_datasets():
     )
     FILE_WRITER.writerow(RT_LABELS[0])
 
-    for x in range(2, 1000):
-        # If n is odd, then n, (n**2-1)/2, (n**2+1)/2 is a right triangle.
-        if x % 2 == 1:
-            y = (x**2 - 1) / 2
-            z = (x**2 + 1) / 2
+    i = 0
 
-        # If n is even, then n, (n**2/4)-1, (n**2/4)+1 is a right triangle.
-        else:
-            y = (x**2 / 4) - 1
-            z = (x**2 / 4) + 1
+    # Holds the set of valid RT triangles (a, b, c)
+    # to avoid duplicate points
+    valid_triangle = []
 
-        a, b, c = shuffle(x, y, z)
+    while True:
+        if i > MAX_LINES:
+            break
+
+        tup1 = RAND_TUPLES[randint(10)]
+        tup2 = RAND_TUPLES[randint(10)]
+
+        a = randint(tup1[0], tup1[1])
+        b = randint(tup2[0], tup2[1])
+        c = int(sqrt(a**2 + b**2))
+
+        # Consider only integer lengths
+        if c != floor_sqrt(a**2 + b**2):
+            continue
+
         validity = check_right_triangle(a, b, c)
 
-        # Assign attributes based on the LABELS
+        # Discard invalid (a, b, c) RTs
+        if validity != 1:
+            continue
+
+        # if (a, b, c) RT was already generated, discard the current one
+        if [a, b, c] in valid_triangle:
+            continue
+        # (a, b, c) is freshly generated, add them to the list of valid RTs
+        else:
+            valid_triangle.append([a, b, c])
+
+        # Generate 5 points in the range [10000, 100000] using (a, b, c)
+        for j in range(5):
+            # (a, b, c) less than 5000 can be multiplied with (10, 20) to get
+            # values in range [10000, 100000]
+            if a < 5000 and b < 5000 and c < 5000:
+                const = randint(10, 19)
+            # (a, b, c) greater than 5000 can be multiplied with (2, 9) to get
+            # values in range [10000, 100000]
+            else:
+                const = randint(2, 9)
+
+            a1, b1, c1 = const * a, const * b, const * c
+            a1, b1, c1 = shuffle(a1, b1, c1)
+            validity1 = check_right_triangle(a1, b1, c1)
+            attributes1 = [a1, b1, c1, validity1]
+            FILE_WRITER.writerow(attributes1)
+            i += 1
+
+        a, b, c = shuffle(a, b, c)
         attributes = [a, b, c, validity]
         FILE_WRITER.writerow(attributes)
 
+        i += 1
+
     FP.close()
+    return valid_triangle
 
 
 def main():
     """Main function."""
-    create_rt_datasets()
+    create_valid_rt_dataset()
 
 
 if __name__ == "__main__":
