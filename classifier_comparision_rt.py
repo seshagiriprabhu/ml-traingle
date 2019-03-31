@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split
 
 # local python import
 from utils import CLASSIFIERS, CLASSIFIER_NAMES
-from utils import EXP7_RT_FILE_NAMES as EXP_RT_FILE_NAMES
+from utils import EXP8_RT_FILE_NAMES as EXP_RT_FILE_NAMES
 from utils import RT_LABELS
 
 
@@ -30,8 +30,11 @@ def main():
         X_train, X_test, y_train, y_test = train_test_split(ds_x, target, **kwargs)
 
         print("-" * 40)
-        print("Dataset: Right Angle Triangle")
-        print(RT_LABELS[counter])
+        if counter < len(RT_LABELS):
+            print("Sorted Right Angle Triangle")
+        else:
+            print("Unsorted Right Angle Triangle")
+        print(RT_LABELS[counter % len(RT_LABELS)])
         print("-" * 40)
 
         for name, classifier in zip(CLASSIFIER_NAMES, CLASSIFIERS):

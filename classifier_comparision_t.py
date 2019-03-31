@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 
 # local python import
 from utils import CLASSIFIERS, CLASSIFIER_NAMES
-from utils import EXP7_T_FILE_NAMES as EXP_T_FILE_NAMES
+from utils import EXP8_T_FILE_NAMES as EXP_T_FILE_NAMES
 from utils import T_LABELS
 
 

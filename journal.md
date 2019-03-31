@@ -2,10 +2,9 @@
 
 ## Classifiers used
 1. Nearest Neighbor (k=3)
-2. Gaussian Process (1.0 * RBF(1.0))
-3. Decision Tree (max_depth=5)
-4. Random Forest(max_depth=5, n_estimators=10, max_features=1)
-5. Multi-Layer Perceptron
+2. Decision Tree (max_depth=5)
+3. Random Forest(max_depth=5, n_estimators=10, max_features=1)
+4. Multi-Layer Perceptron
 ```python
 activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
 beta_2=0.999, early_stopping=False, epsilon=1e-08,
@@ -15,9 +14,9 @@ nesterovs_momentum=True, power_t=0.5, random_state=None,
 shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
 verbose=False, warm_start=False
 ```
-6. AdaBoost
-7. Naive Bayes
-8. QDA
+5. AdaBoost
+6. Naive Bayes
+7. QDA
 
 This journal contains details about our various experiments to apply ML
 on normal triangle and right triangle datasets which we have
@@ -103,7 +102,7 @@ values to (a, b, c).
 | Right Triangle (RT 2) - [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image2.png) |
 | Right Triangle (RT 3) - [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image3.png) |
 
-### Results
+#### Results
 |                   | RT 1 | RT 2 | RT 3 |
 | ----------------- | ---- | ---- | ---- |
 | kNN               | 0.94 | 0.95 | 0.97 |
@@ -139,7 +138,7 @@ values to (a, b, c).
 | Right Triangle (RT 2) - [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image2.png) |
 | Right Triangle (RT 3) - [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image3.png) |
 
-### Results
+#### Results
 |                   | RT 1 | RT 2 | RT 3 |
 | ----------------- | ---- | ---- | ---- |
 | kNN               | 0.94 | 0.94 | 0.96 |
@@ -176,7 +175,7 @@ to (a, b, c).
 | Right Triangle (RT 2) - [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image2.png) |
 | Right Triangle (RT 3) - [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image3.png) |
 
-### Results
+#### Results
 |                   | RT 1 | RT 2 | RT 3 |
 | ---               | ---- | ---- | ---- |
 | kNN               | 0.45 | 0.48 | 0.48 |
@@ -230,7 +229,7 @@ New datasets are added with different attributes.
 | Right Triangle (RT 5) - [rt_dataset5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image5.png) |
 | Right Triangle (RT 6) - [rt_dataset6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image6.png) |
 
-### Right Triangle Results
+#### Right Triangle Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
 | ----------------- | ---- | ---- | ---- | ---- | ---- | ---- |
 | kNN               | 0.51 | 0.52 | 0.52 | 0.49 | 0.49 | 0.49 |
@@ -256,7 +255,7 @@ Commit - [e96b3f334f60ba4bc9212cc4f0085acb77647397](https://github.com/seshagiri
 | Triangle (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/t_image3.png) |
 
 
-### Triangle Results
+#### Triangle Results
 |                   | T 1  | T 2  | T 3  |
 | ----------------- | ---- | ---- | ---- |
 | kNN               | 0.99 | 0.98 | 0.98 |
@@ -278,7 +277,7 @@ Commit - [e96b3f334f60ba4bc9212cc4f0085acb77647397](https://github.com/seshagiri
 | Right Triangle (RT 5) - [rt_dataset5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image5.png) |
 | Right Triangle (RT 6) - [rt_dataset6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image6.png) |
 
-### Right Triangle Results
+#### Right Triangle Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
 | ----------------- | ---- | ---- | ---- | ---- | ---- | ---- |
 | kNN               | 0.65 | 0.72 | 0.72 | 0.67 | 0.72 | 0.72 |
@@ -288,3 +287,96 @@ Commit - [e96b3f334f60ba4bc9212cc4f0085acb77647397](https://github.com/seshagiri
 | AdaBoost          | 0.50 | 0.52 | 0.52 | 0.51 | 0.51 | 0.52 |
 | Naive Bayes       | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 |
 | QDA               | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 | 0.50 |
+
+
+## Experiment #8
+Commit - [dd3309ee65ad9f0933fef13a9eb63e720eedff53](https://github.com/seshagiriprabhu/ml-traingle/tree/dd3309ee65ad9f0933fef13a9eb63e720eedff53)
+
+1. Triangle is generated the same way as in Experiment #6.
+2. There are 1000 entries in the triangle dataset.
+3. Valid 1000 right triangles are generated (`generate_valid_rt.py`)
+using the following steps:
+    1. Pick 100 two random points (a, b) from each tuple range in `RAND_TUPLES`.
+        1. Compute the third side `c` by sqrt(a<sup>2</sup>, b<sup>2</sup>).
+        2. Only consider RT, if `c` is a whole number integer
+        (float `c` is immediately rejected).
+        3. A `valid_triangle` list is maintained to store sorted points
+        (a, b, c) where a < b < c.
+        4. `valid_triangle` list also avoids duplicate entries.
+	2. Generate 5 more valid RT triangles from (a, b, c) using a multiplier
+       chosen randomly from a range:
+        1. (10, 19) if (a, b, c) values are below 5000.
+        2. (2, 9) if (a, b, c) values are greater than 5000.
+    3. Two dataset are stored based on how `valid_triangle` data is written
+       into the file:
+        1. `data/experiment/rt_dataset_s1.csv` contains sorted or ordered
+         points (a < b < c).
+        1. `data/experiment/rt_dataset_u1.csv` contains unsorted (a, b, c).
+4. RT dataset reads `data/experiment/rt_dataset_s1.csv` and
+`data/experiment/rt_dataset_u1.csv` to generate (`generate_rt_dataset.py`)
+set of sorted (`data/experiment8/rt_dataset_u[1-6].csv`) and unsorted
+(`data/experiment8/rt_dataset_s[1-6].csv`) datasets.
+5. RT dataset contains 2000 entries in which 1000 are valid RTs and remaining
+are invalid. Invalid RTs are generated by adding a random const to (a, b, c).
+
+### Triangle Dataset description
+| Dataset | Attributes | 3D plot |
+| --- | --- | --- |
+| Triangle (T 1) - [t_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset1.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image1.png) |
+| Triangle (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset2.csv) | (a, b, c, a + b, a + c, b + c, validity) | [t_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image2.png) |
+| Triangle (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image3.png) |
+
+
+#### Triangle Results
+|                   | T 1  | T 2  | T 3  |
+| ----------------- | ---- | ---- | ---- |
+| kNN               | 0.93 | 0.91 | 0.91 |
+| Decision Tree     | 0.82 | 0.83 | 0.76 |
+| Random Forest     | 0.82 | 0.89 | 0.84 |
+| MLP               | 0.98 | 0.95 | 0.95 |
+| AdaBoost          | 0.79 | 0.83 | 0.64 |
+| Naive Bayes       | 0.81 | 0.77 | 0.75 |
+| QDA               | 0.85 | 0.54 | 0.85 |
+
+
+### Sorted Right Triangle Dataset Description
+| Dataset | Attributes | 3D plot |
+| --- | --- | --- |
+| Right Triangle (RT 1) - [rt_dataset_s1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s1.csv) | (a, b, c, validity) | [rt_image_s1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s1.png) |
+| Right Triangle (RT 2) - [rt_dataset_s2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_s2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s2.png) |
+| Right Triangle (RT 3) - [rt_dataset_s3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_s3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s3.png) |
+| Right Triangle (RT 4) - [rtt_dataset_s4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s4.csv) | (a + b, a + c, b + c, validity) | [rt_image_s4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s4.png) |
+| Right Triangle (RT 5) - [rt_dt_dataset_s5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_s5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s5.png) |
+| Right Triangle (RT 6) - [rt_dataset_s6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_s6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s6.png) |
+
+#### Sorted RT Results
+|                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
+| ----------------- | ---- | ---- | ---- | ---- | ---- | ---- |
+| kNN               | 0.72 | 0.71 | 0.71 | 0.67 | 0.72 | 0.72 |
+| Decision Tree     | 0.62 | 0.62 | 0.62 | 0.60 | 0.51 | 0.52 |
+| Random Forest     | 0.64 | 0.60 | 0.62 | 0.59 | 0.51 | 0.52 |
+| MLP               | 0.81 | 0.90 | 0.82 | 0.88 | 0.52 | 0.52 |
+| AdaBoost          | 0.63 | 0.63 | 0.63 | 0.61 | 0.51 | 0.52 |
+| Naive Bayes       | 0.58 | 0.58 | 0.58 | 0.58 | 0.50 | 0.50 |
+| QDA               | 0.81 | 1.00 | 1.00 | 0.81 | 0.50 | 0.50 |
+
+### Unsorted Right Triangle Dataset Description
+| Dataset | Attributes | 3D plot |
+| --- | --- | --- |
+| Right Triangle (RT 1) - [rt_dataset_u1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u1.csv) | (a, b, c, validity) | [rt_image_u1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u1.png) |
+| Right Triangle (RT 2) - [rt_dataset_u2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_u2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u2.png) |
+| Right Triangle (RT 3) - [rt_dataset_u3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_u3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u3.png) |
+| Right Triangle (RT 4) - [rtt_dataset_u4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u4.csv) | (a + b, a + c, b + c, validity) | [rt_image_u4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u4.png) |
+| Right Triangle (RT 5) - [rt_dt_dataset_u5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_u5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u5.png) |
+| Right Triangle (RT 6) - [rt_dataset_u6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_u6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u6.png) |
+
+#### Unsorted RT Results
+|                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
+| ----------------- | ---- | ---- | ---- | ---- | ---- | ---- |
+| kNN               | 0.56 | 0.56 | 0.56 | 0.57 | 0.54 | 0.56 |
+| Decision Tree     | 0.60 | 0.60 | 0.60 | 0.54 | 0.54 | 0.59 |
+| Random Forest     | 0.60 | 0.60 | 0.59 | 0.54 | 0.53 | 0.59 |
+| MLP               | 0.51 | 0.51 | 0.57 | 0.48 | 0.51 | 0.54 |
+| AdaBoost          | 0.53 | 0.53 | 0.53 | 0.53 | 0.48 | 0.55 |
+| Naive Bayes       | 0.59 | 0.57 | 0.57 | 0.59 | 0.57 | 0.57 |
+| QDA               | 0.54 | 0.59 | 0.54 | 0.54 | 0.54 | 0.48 |
