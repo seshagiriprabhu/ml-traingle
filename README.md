@@ -65,8 +65,19 @@ sudo apt-get install python-tk
 
 ## Plot datasets
 `plot_dataset_3d_show.py` can be used to plot 3D datasets
-of all the experiments. `python-tk` is required to be installed in-order
+of the experiments. `python-tk` is required to be installed in-order
 to display the screen in which the `matplot3d` displays the plot.
+A csv file needs to be provided as an argument to the program.
 ```bash
-python plot_dataset_3d_show.py
+$ python plot_dataset_3d_show.py -h
+usage: plot_dataset_3d_show.py [-h] -d DATASET
+
+3D plot for T/RT datasets
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -d DATASET, --dataset DATASET
+                        CSV dataset file to plot
+
+$ python plot_dataset_3d_show.py -d data/experiment8/rt_dataset_u1.csv
 ```

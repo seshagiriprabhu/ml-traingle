@@ -1,7 +1,10 @@
 #!/usr/bin/python3.6
 """
-A program to plot the triangle and right triangle datasets
+A program to 3D plot a given CSV file
 """
+import os
+import sys
+from argparse import ArgumentParser
 import numpy as np
 import pandas as pnd
 import matplotlib as mpl
@@ -9,85 +12,74 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from mpl_toolkits.mplot3d import Axes3D
 
-# local python import
-from utils import DATASET_T_FILES, DATASET_RT_FILES
-
 mpl.rcParams['legend.fontsize'] = 10
 
-for count, T_FILES in enumerate(DATASET_T_FILES):
-    if count < 4 or count > 5:
-        continue
 
-    for counter, dataset in enumerate(T_FILES):
-        if counter > 0:
-            continue
+def display_csv_dataset(dataset):
+    """Display the given CSV dataset.
 
-        DF = pnd.read_csv(dataset)
+    Parameters:
+    dataset (file): csv file
+    """
+    df = pnd.read_csv(dataset)
+    labels = list(df.columns.values)
 
-        THREEDEE = plt.figure(figsize=(19.20, 10.80)).gca(projection='3d')
+    three_dee = plt.figure(figsize=(19.20, 10.80)).gca(projection='3d')
+    colors = np.where(df['validity'] == 1, 'red', 'blue')
 
-        if counter == 0 or counter == 1:
-            x, y, z = DF['side1'], DF['side2'], DF['side3']
-            l1, l2, l3 = 'Side 1', 'Side 2', 'Side 3'
-            title = "Normal Triangle Experiment #" + str(count + 1)
+    three_dee.scatter(
+        df[labels[0]], df[labels[1]], df[labels[2]],
+        c=colors, s=60, alpha=0.5,
+        edgecolors='none', label='Valid Triangle'
+    )
+    three_dee.set_xlabel(labels[0], fontsize=16)
+    three_dee.set_ylabel(labels[1], fontsize=16)
+    three_dee.set_zlabel(labels[2], fontsize=16)
+    red_patch = mpatches.Patch(color='red', label='Valid Triangle')
+    blue_patch = mpatches.Patch(color='blue', label='Invalid Triangle')
+    three_dee.legend(handles=[red_patch, blue_patch])
 
-        colors = np.where(DF['validity'] == 1, 'red', 'blue')
-
-        THREEDEE.scatter(
-            x, y, z,
-            c=colors,
-            s=60,
-            alpha=0.5, edgecolors='none',
-            label='Valid Triangle'
-        )
-        THREEDEE.set_title(title, fontsize=30)
-        THREEDEE.set_xlabel(l1, fontsize=16)
-        THREEDEE.set_ylabel(l2, fontsize=16)
-        THREEDEE.set_zlabel(l3, fontsize=16)
-        red_patch = mpatches.Patch(color='red', label='Valid Triangle')
-        blue_patch = mpatches.Patch(color='blue', label='Invalid Triangle')
-        THREEDEE.legend(handles=[red_patch, blue_patch])
-        plt.show()
-        plt.close()
+    plt.show()
+    plt.close()
 
 
-for count, RT_FILES in enumerate(DATASET_RT_FILES):
-    if count < 3 or count == 5:
-        continue
+def dataset(astring):
+    """Test if the dataset file exists.
 
-    for counter, dataset in enumerate(RT_FILES):
-        if counter > 0:
-            continue
+    Parameters:
+    astring: argstring passed to the --dataset option
+    """
+    if not os.path.isfile(astring):
+        print("File %s does not exist" % astring)
+        raise ValueError
+    return astring
 
-        DF = pnd.read_csv(dataset)
-        THREEDEE = plt.figure(figsize=(19.20, 10.80)).gca(projection='3d')
 
-        x, y, z = DF['side1'], DF['side2'], DF['side3']
-        l1, l2, l3 = 'Side 1', 'Side 2', 'Side 3'
-        if count < 6:
-            title = "Right Triangle Experiment #" + str(count + 1)
-        else:
-            title = "First 1000 valid right triangles"
+def main():
+    """Main function."""
+    parser = ArgumentParser(description="3D plot for T/RT datasets")
+    parser.add_argument(
+        '-d', '--dataset', dest='dataset',
+        default=None, required=True,
+        help='CSV dataset file to plot'
+    )
+    parsed_args = parser.parse_args()
 
-        colors = np.where(DF['validity'] == 1, 'red', 'blue')
-        THREEDEE.scatter(
-            x, y, z,
-            c=colors,
-            s=60,
-            alpha=0.5, edgecolors='none'
-        )
-        THREEDEE.set_title(title, fontsize=30)
-        THREEDEE.set_xlabel(l1, fontsize=16)
-        THREEDEE.set_ylabel(l2, fontsize=16)
-        THREEDEE.set_zlabel(l3, fontsize=16)
-        red_patch = mpatches.Patch(
-            color='red',
-            label='Valid Right Angle Triangle'
-        )
-        blue_patch = mpatches.Patch(
-            color='blue',
-            label='Invalid Right Angle Triangle'
-        )
-        THREEDEE.legend(handles=[red_patch, blue_patch])
-        plt.show()
-        plt.close()
+    # verify if the given csv is valid and parsable
+    try:
+        df = pnd.read_csv(parsed_args.dataset)
+
+    except pnd.io.common.EmptyDataError:
+        print("File %s is empty", parsed_args.dataset)
+        sys.exit(0)
+
+    except Exception as error:
+        print("Error in reading %s file", parsed_args.dataset)
+        print(error)
+        sys.exit(0)
+
+    display_csv_dataset(parsed_args.dataset)
+
+
+if __name__ == "__main__":
+    main()
