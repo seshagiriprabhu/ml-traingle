@@ -30,9 +30,9 @@ Commit - [93ee58dfcbd037787a46cca226b4ebc799e20eaf](https://github.com/seshagiri
 should be greater than the third side.
 
 ### Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| Triangle - [training.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment1/triangle.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp1-image/t_image1.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| Triangle | [training.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment1/triangle.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp1-image/t_image1.png) |
 
 ### Results
 |                   |   T  |
@@ -62,11 +62,11 @@ a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
 values to (a, b, c).
 
 ### Right Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [rt_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment2/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp2-image/rt_image1.png) |
-| (RT 2) - [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment2/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp2-image/rt_image2.png) |
-| (RT 3) - [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment2/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | Couldn't plot the graph as `matplot3D` can't handle the data |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [rt_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment2/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp2-image/rt_image1.png) |
+| (RT 2) | [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment2/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp2-image/rt_image2.png) |
+| (RT 3) | [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment2/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | Couldn't plot the graph as `matplot3D` can't handle the data |
 
 #### Right Triangle Classification Results
 |                   | RT 1 | RT 2 | RT 3 |
@@ -96,11 +96,11 @@ The right angle triangles generated in the experiment #2 are ordered (a < b < c)
 values to (a, b, c).
 
 ### Right Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image1.png) |
-| (RT 2) - [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image2.png) |
-| (RT 3) - [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image3.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image1.png) |
+| (RT 2) | [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image2.png) |
+| (RT 3) | [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp3-image/rt_image3.png) |
 
 #### Results
 |                   | RT 1 | RT 2 | RT 3 |
@@ -132,11 +132,11 @@ Right angle triangles are generated using the following rules:
 values to (a, b, c).
 
 ### Right Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment4/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image1.png) |
-| (RT 2) - [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image2.png) |
-| (RT 3) - [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image3.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment4/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image1.png) |
+| (RT 2) | [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image2.png) |
+| (RT 3) | [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment3/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp4-image/rt_image3.png) |
 
 #### Results
 |                   | RT 1 | RT 2 | RT 3 |
@@ -169,11 +169,11 @@ Right angle triangles are generated using the following rules:
 to (a, b, c).
 
 ### Right Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image1.png) |
-| (RT 2) - [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image2.png) |
-| (RT 3) - [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image3.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image1.png) |
+| (RT 2) | [dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image2.png) |
+| (RT 3) | [dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment5/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp5-image/rt_image3.png) |
 
 #### Results
 |                   | RT 1 | RT 2 | RT 3 |
@@ -200,11 +200,11 @@ Triangle and Right triangle is generated the same way as in Experiment #5.
 New datasets are added with different attributes.
 
 ### Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (T 1) - [t_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/t_dataset1.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/t_image1.png) |
-| (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/t_dataset2.csv) | (a, b, c, a + b, a + c, b + c, validity) | [t_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/t_image2.png) |
-| (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/t_image3.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (T 1) | [t_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/t_dataset1.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/t_image1.png) |
+| (T 2) | [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/t_dataset2.csv) | (a, b, c, a + b, a + c, b + c, validity) | [t_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/t_image2.png) |
+| (T 2) | [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/t_image3.png) |
 
 
 ### Triangle Results
@@ -220,14 +220,14 @@ New datasets are added with different attributes.
 
 
 ### Right Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [rt_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image1.png) |
-| (RT 2) - [rt_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image2.png) |
-| (RT 3) - [rt_dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image3.png) |
-| (RT 4) - [rt_dataset4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset4.csv) | (a + b, a + c, b + c, validity) | [rt_image4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image4.png) |
-| (RT 5) - [rt_dataset5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image5.png) |
-| (RT 6) - [rt_dataset6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image6.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [rt_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image1.png) |
+| (RT 2) | [rt_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image2.png) |
+| (RT 3) | [rt_dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image3.png) |
+| (RT 4) | [rt_dataset4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset4.csv) | (a + b, a + c, b + c, validity) | [rt_image4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image4.png) |
+| (RT 5) | [rt_dataset5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image5.png) |
+| (RT 6) | [rt_dataset6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment6/rt_dataset6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image6.png) |
 
 #### Right Triangle Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
@@ -248,11 +248,11 @@ Commit - [e96b3f334f60ba4bc9212cc4f0085acb77647397](https://github.com/seshagiri
 3. The number of perceptrons in the hidden layer of MLP classifier is increased to 100 from 30.
 
 ### Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (T 1) - [t_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/t_dataset1.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/t_image1.png) |
-| (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/t_dataset2.csv) | (a, b, c, a + b, a + c, b + c, validity) | [t_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/t_image2.png) |
-| (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/t_image3.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (T 1) | [t_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/t_dataset1.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/t_image1.png) |
+| (T 2) | [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/t_dataset2.csv) | (a, b, c, a + b, a + c, b + c, validity) | [t_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/t_image2.png) |
+| (T 2) | [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/t_image3.png) |
 
 
 #### Triangle Results
@@ -268,14 +268,14 @@ Commit - [e96b3f334f60ba4bc9212cc4f0085acb77647397](https://github.com/seshagiri
 
 
 ### Right Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [rt_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image1.png) |
-| (RT 2) - [rt_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image2.png) |
-| (RT 3) - [rt_dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image3.png) |
-| (RT 4) - [rt_dataset4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset4.csv) | (a + b, a + c, b + c, validity) | [rt_image4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image4.png) |
-| (RT 5) - [rt_dataset5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image5.png) |
-| (RT 6) - [rt_dataset6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image6.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [rt_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset1.csv) | (a, b, c, validity) | [rt_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image1.png) |
+| (RT 2) | [rt_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image2.png) |
+| (RT 3) | [rt_dataset3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image3.png) |
+| (RT 4) | [rt_dataset4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset4.csv) | (a + b, a + c, b + c, validity) | [rt_image4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp6-image/rt_image4.png) |
+| (RT 5) | [rt_dataset5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image5.png) |
+| (RT 6) | [rt_dataset6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment7/rt_dataset6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp7-image/rt_image6.png) |
 
 #### Right Triangle Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
@@ -320,11 +320,11 @@ set of sorted (`data/experiment8/rt_dataset_u[1-6].csv`) and unsorted
 are invalid. Invalid RTs are generated by adding a random const to (a, b, c).
 
 ### Triangle Dataset description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (T 1) - [t_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset1.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image1.png) |
-| (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset2.csv) | (a, b, c, a + b, a + c, b + c, validity) | [t_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image2.png) |
-| (T 2) - [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image3.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (T 1) | [t_dataset1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset1.csv) | (a, b, c, validity) | [t_image1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image1.png) |
+| (T 2) | [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset2.csv) | (a, b, c, a + b, a + c, b + c, validity) | [t_image2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image2.png) |
+| (T 2) | [t_dataset2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/t_dataset3.csv) | (a + b, a + c, b + c, validity) | [t_image3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/t_image3.png) |
 
 
 #### Triangle Results
@@ -340,14 +340,14 @@ are invalid. Invalid RTs are generated by adding a random const to (a, b, c).
 
 
 ### Sorted Right Triangle Dataset Description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [rt_dataset_s1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s1.csv) | (a, b, c, validity) | [rt_image_s1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s1.png) |
-| (RT 2) - [rt_dataset_s2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_s2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s2.png) |
-| (RT 3) - [rt_dataset_s3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_s3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s3.png) |
-| (RT 4) - [rtt_dataset_s4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s4.csv) | (a + b, a + c, b + c, validity) | [rt_image_s4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s4.png) |
-| (RT 5) - [rt_dt_dataset_s5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_s5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s5.png) |
-| (RT 6) - [rt_dataset_s6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_s6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s6.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [rt_dataset_s1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s1.csv) | (a, b, c, validity) | [rt_image_s1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s1.png) |
+| (RT 2) | [rt_dataset_s2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_s2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s2.png) |
+| (RT 3) | [rt_dataset_s3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_s3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s3.png) |
+| (RT 4) | [rtt_dataset_s4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s4.csv) | (a + b, a + c, b + c, validity) | [rt_image_s4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s4.png) |
+| (RT 5) | [rt_dt_dataset_s5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_s5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s5.png) |
+| (RT 6) | [rt_dataset_s6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_s6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_s6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_s6.png) |
 
 #### Sorted RT Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
@@ -361,14 +361,14 @@ are invalid. Invalid RTs are generated by adding a random const to (a, b, c).
 | QDA               | 0.81 | 1.00 | 1.00 | 0.81 | 0.50 | 0.50 |
 
 ### Unsorted Right Triangle Dataset Description
-| Dataset | Attributes | 3D plot |
-| --- | --- | --- |
-| (RT 1) - [rt_dataset_u1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u1.csv) | (a, b, c, validity) | [rt_image_u1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u1.png) |
-| (RT 2) - [rt_dataset_u2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_u2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u2.png) |
-| (RT 3) - [rt_dataset_u3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_u3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u3.png) |
-| (RT 4) - [rtt_dataset_u4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u4.csv) | (a + b, a + c, b + c, validity) | [rt_image_u4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u4.png) |
-| (RT 5) - [rt_dt_dataset_u5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_u5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u5.png) |
-| (RT 6) - [rt_dataset_u6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_u6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u6.png) |
+| Dataset | File | Attributes | 3D plot |
+| --- | --- | --- | --- |
+| (RT 1) | [rt_dataset_u1.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u1.csv) | (a, b, c, validity) | [rt_image_u1.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u1.png) |
+| (RT 2) | [rt_dataset_u2.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u2.csv) | (a, b, c, a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_u2.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u2.png) |
+| (RT 3) | [rt_dataset_u3.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u3.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, validity) | [rt_image_u3.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u3.png) |
+| (RT 4) | [rtt_dataset_u4.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u4.csv) | (a + b, a + c, b + c, validity) | [rt_image_u4.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u4.png) |
+| (RT 5) | [rt_dt_dataset_u5.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u5.csv) | (a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_u5.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u5.png) |
+| (RT 6) | [rt_dataset_u6.csv](https://github.com/seshagiriprabhu/ml-traingle/blob/master/data/experiment8/rt_dataset_u6.csv) | (a<sup>2</sup>, b<sup>2</sup>, c<sup>2</sup>, a<sup>2</sup> + b<sup>2</sup>, a<sup>2</sup> + c<sup>2</sup>, b<sup>2</sup> + c<sup>2</sup>, validity) | [rt_image_u6.png](https://raw.githubusercontent.com/seshagiriprabhu/ml-traingle/master/image/exp8-image/rt_image_u6.png) |
 
 #### Unsorted RT Results
 |                   | RT 1 | RT 2 | RT 3 | RT 4 | RT 5 | RT 6 |
