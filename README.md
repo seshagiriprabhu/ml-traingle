@@ -33,6 +33,29 @@ The program `classifier_comparision_rt.py` uses right triangle dataset files
 $ python classifier_comparision_rt.py
 ```
 
+## Generate RT and Triangle Datasets
+Creates datasets under `data/experiment$i/` directory. Where `i` is the
+number assigned to the latest experiment.
+
+`generate_rt_dataset.py` and `generate_triangle.py` files are configured to
+generate dataset for the latest experiment.
+`generate_valid_rt.py` generates 1000 random valid RT points.
+
+Generate datasets in the following order:
+
+1. Generate Normal Triangle Dataset
+```bash
+python generate_triangle.py
+```
+2. Generate Valid RT Dataset
+```bash
+python generate_valid_rt.py
+```
+3. Generate RT datasets
+```bash
+python generate_rt_dataset.py
+```
+
 ## (Optional) Ubuntu dependences
 `python-tk` is a debian package which is used by the `plot_dataset_3d.py` 
 program to 3D plot the triangle and right triangle datasets.

@@ -12,7 +12,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # local python import
 from utils import DATASET_T_FILES, DATASET_RT_FILES
-from utils import IMAGE_T_FILES, IMAGE_RT_FILES
+from utils import IMAGE_T_FILES, IMAGE_RT_FILES, RT_LABELS
 
 mpl.rcParams['legend.fontsize'] = 10
 
@@ -70,15 +70,15 @@ for count, RT_FILES in enumerate(DATASET_RT_FILES):
         DF = pnd.read_csv(dataset)
         THREEDEE = plt.figure(figsize=(19.20, 10.80)).gca(projection='3d')
 
-        if counter == 0 or counter == 1:
+        if counter % len(RT_LABELS) == 0 or counter % len(RT_LABELS) == 1:
             x, y, z = DF['side1'], DF['side2'], DF['side3']
             l1, l2, l3 = 'Side 1', 'Side 2', 'Side 3'
             title = "Right Triangle"
-        elif counter == 2:
+        elif counter % len(RT_LABELS) == 2:
             x, y, z = DF['side1^2'], DF['side2^2'], DF['side3^2']
             l1, l2, l3 = 'Side1^2', 'Side2^2', 'Side3^2'
             title = "Right Triangle with Side Squares"
-        elif counter == 3:
+        elif counter % len(RT_LABELS) == 3:
             x, y = DF['side1+side2'], DF['side1+side3']
             z = DF['side2+side3']
             l1, l2, l3 = 'Side1 + Side 2', 'Side1 + Side 3', 'Side 2 + Side3'
